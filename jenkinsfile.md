@@ -10,7 +10,8 @@ pipeline{
     stages{
         stage('GIT'){
             steps{
-                git url: https://github.com/yes-key/spring-petclinic/tree/dev, branch: dev
+                git url: 'https://github.com/yes-key/spring-petclinic/tree/dev', 
+                branch: 'dev'
             }
         stage('build'){
         sh mvn 'mvn clean package'        
